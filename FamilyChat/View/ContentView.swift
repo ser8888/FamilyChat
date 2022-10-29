@@ -8,15 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var username = ""
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationView {
+            if username == "" {
+                LoginView(username: $username)
+            } else {
+                RoomsView(username: username)
+            }
         }
-        .padding()
     }
+        
 }
 
 struct ContentView_Previews: PreviewProvider {

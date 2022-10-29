@@ -6,9 +6,12 @@
 //
 
 import SwiftUI
+import RealmSwift
+
+let realmApp = RealmSwift.App(id: "chat-wvust")
 
 @main
-struct FamilyChatApp: App {
+struct FamilyChatApp: SwiftUI.App {
     var body: some Scene {
         WindowGroup {
             ContentView()
