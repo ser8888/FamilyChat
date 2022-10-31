@@ -14,6 +14,7 @@ let realmApp = RealmSwift.App(id: "chat-wvust")
 struct FamilyChatApp: SwiftUI.App {
     var body: some Scene {
         WindowGroup {
+            let _ = print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!.path)
             ContentView()
         }
     }
